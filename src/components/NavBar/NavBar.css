@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+
+.me-auto.navbar-nav {
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+  top: -10px;
+}
+
+.Navbar {
+  top: -10px;
+  width: 100%;
+  font-size: 1.2rem;
+  transition: 0.5s;
+  height: 100px;
+}
+
+.Navbar.false {
+  top: -10px;
+  height: 90px;
+  background-color: rgba(33, 33, 33, 0.075);
+}
+.Navbar.active {
+  top: -10px;
+  height: 90px;
+  background-color: rgb(33, 33, 33);
+}
+
+.NavBar_Logo {
+  margin-left: 150px;
+}
+
+.NavBar_Links {
+  margin-right: 150px;
+  font-family: "Inter", sans-serif;
+}
+
+.NavBar_Links a {
+  margin-right: 40px;
+  color: white;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.NavBar_SignUp {
+  color: black !important;
+  background-color: #e9cb88;
+  width: 124px;
+  height: 38px;
+  left: 1097px;
+  border-radius: 6px;
+}
+
+
+/* -----MODAL----- */
+/* -----MODAL----- */
+/* -----MODAL----- */
+
+.modal-header {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: calc(0.3rem - 1px);
+  border-top-right-radius: calc(0.3rem - 1px);
+  flex-direction: column;
+}
+
+.modal-content {
+  width: 100%;
+  height: 100%;
+  padding: 10%;
+  top: 0px;
+
+  background: rgb(33, 33, 33);
+  background: linear-gradient(
+    201deg,
+    rgba(33, 33, 33, 1) 43%,
+    rgba(87, 35, 35, 0.9654236694677871) 100%
+  );
+  backdrop-filter: blur(100px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 56px;
+}
+
+.modal-content form {
+  width: 100%;
+  padding: 20px;
+}
+
+.modal-content p {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+
+  color: #9ca3af;
+}
+
+.modal-content h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: white;
+}
+
+.modal-content form::placeholder {
+  color: rgba(209, 213, 219, 1);
+}
+
+.modal-content button {
+  width: 50%;
+}
+
+.modal-body #ButtonRegister {
+  width: 100%;
+  background: #9ca3af;
+  border-radius: 6px;
+}
+ #ButtonClose {
+  background: transparent;
+  color: black;
+  border: none;
+  width: 100%;
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.modal-body #ButtonClose:hover {
+  background: #9ca3af;
+}
+
+
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .Navbar.false {
+    top: -10px;
+    height: 100%;
+    background-color: rgba(33, 33, 33, 0.075);
+    padding-bottom: 30px;
+  }
+  .Navbar.active {
+    top: -10px;
+    height: 100%;
+    background-color: rgb(33, 33, 33);
+  }
+  .NavBar_Links a {
+    color: white;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 1rem;
+    line-height: 20px;
+  }
+  .NavBar_SignUp {
+    background-color: #e9cb88;
+    width: 50%;
+    height: 38px;
+
+    border-radius: 6px;
+  }
+  .NavBar_Logo {
+    margin-left: 0px;
+  }
+
+  .NavBar_Links {
+    margin-right: 0px;
+    font-family: "Inter", sans-serif;
+  }
+}
+
+
+/* ----MEDIA QUERY---- */
+/* ----MEDIA QUERY---- */
+/* ----MEDIA QUERY---- */
+
+/* // X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .Navbar.false {
+    top: -10px;
+    height: 100%;
+    background-color: rgba(33, 33, 33, 0.075);
+    padding-bottom: 30px;
+  }
+  .Navbar.active {
+    top: -10px;
+    height: 100%;
+    background-color: rgb(33, 33, 33);
+  }
+  .NavBar_Links a {
+    color: white;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 1rem;
+    line-height: 20px;
+  }
+  .NavBar_SignUp {
+    background-color: #e9cb88;
+    width: 50%;
+    height: 38px;
+
+    border-radius: 6px;
+  }
+  .NavBar_Logo {
+    margin-left: 0px;
+  }
+
+  .NavBar_Links {
+    margin-right: 0px;
+    font-family: "Inter", sans-serif;
+  }
+}

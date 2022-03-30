@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Scheherazade+New&display=swap");
+
+.HomePageCoins_Container {
+  height: 100vh;
+  padding-top: 30px;
+}
+
+.HomePageCoins_Container button {
+  margin: 17px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 6px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  border: 0px;
+}
+
+.HomePageCoins_Container button:focus {
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  border: 0px;
+}
+
+.HomePageCoins_Container_Table {
+  padding-top: 50px;
+}
+
+/* NOMBRES DE TABLAS */
+
+th {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: white;
+}
+
+/* ESTILOS DE BORDES */
+
+tr {
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+/* INFORMACION DE LAS TABLAS */
+
+td {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  color: #b6b6b6 !important;
+}
+
+td img {
+  margin-right: 10px;
+}
+
+.progress {
+  margin-top: 8px;
+  width: 30%;
+  height: 5px;
+  background-color: #e9ecef30;
+}
+
+.ProgressBar_Center {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.ProgressBar_Center p {
+  margin-right: 10px;
+}
+
+.td_Center {
+  display: flex;
+  justify-content: space-around;
+}
+
+.td_Negative {
+  color: red;
+}
+
+.td_Positive {
+  color: green;
+}
+
+/* ----PAGINADO---- */
+/* ----PAGINADO---- */
+/* ----PAGINADO---- */
+
+.HomePageCoins_Row__Pagination{
+    padding-top: 50px;
+}
+
+.HomePageCoins_Row__Pagination li {
+  margin-right: 30px;
+}
+
+.HomePageCoins_Row__Pagination p {
+  color: white;
+}
+
+.HomePageCoins_Row__Pagination a:hover {
+  box-shadow: 1px 2px 77px -1px rgba(0, 0, 0, 0.75) inset;
+  -webkit-box-shadow: 1px 2px 77px -1px rgba(0, 0, 0, 0.75) inset;
+  -moz-box-shadow: 1px 2px 77px -1px rgba(0, 0, 0, 0.75) inset;
+  color: white;
+  border-radius: 6px;
+}
+
+.HomePageCoins_Row__Pagination a {
+  background-color: transparent;
+  border: none;
+  font-family: "Inter", sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 14px;
+  color: white;
+}
+.HomePageCoins_Row__Pagination a:focus {
+  background-color: #e9cb88 ;
+  border-radius: 6px;
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  background-color: #e9cb88 !important;
+  border-radius: 6px;
+  color: black;
+}
+
+/* ---DROPDOWN--- */
+/* ---DROPDOWN--- */
+/* ---DROPDOWN--- */
+
+.Footer_Centrado_Dropdown {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Footer_Centrado_Dropdown button {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  width: 50px;
+  height: 100%;
+}
+
+
+/* ----MEDIA QUERY---- */
+/* ----MEDIA QUERY---- */
+/* ----MEDIA QUERY---- */
+
+/* // X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+ 
+.HomePageCoins_Container {
+  height: 100%;
+  width: 100vmax;
+  padding-top: 30px;
+}
+
+.HomePageCoins_Row__Pagination{
+  padding-top: 0%;
+  height: 100%;
+}
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .HomePageCoins_Container {
+    height: 100%;
+    width: 100vmax;
+    padding-top: 30px;
+  }
+  
+  .HomePageCoins_Row__Pagination{
+    padding-top: 0%;
+    height: 100%;
+  }
+  
+}
+  
+
+

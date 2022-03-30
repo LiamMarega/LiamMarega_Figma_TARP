@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Scheherazade+New&display=swap");
+
+/* BODY FOOTER */
+.Footer_Container {
+  height: 162px;
+  display: flex;
+  background-color: #1e1e1e;
+  color: #6b7280;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  align-items: center;
+}
+.Footer_Container a {
+    text-decoration: none;
+    color: #6b7280;
+}
+
+/* CENNTRADO DE DIVS */
+.Footer_Center {
+    width: 100%;
+  display: flex;
+
+}
+
+.Footer_Center a{
+   margin: 25px;
+}
+
+.Footer_Copy{
+    margin-left: 20%;
+}
+
+
+
+
+
+
+/* ----MEDIA QUERY---- */
+/* ----MEDIA QUERY---- */
+/* ----MEDIA QUERY---- */
+
+
+@media (max-width: 575.98px) {
+  .Footer_Container {
+   
+    width: 100vmax;
+    display: flex;
+    background-color: #1e1e1e;
+    color: #6b7280;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    align-items: center;
+  }
+  .Footer_Copy{
+    margin-left: 10%;
+}
+
+.Footer_Center a{
+  margin: 10%;
+}
+
+  
+}
+
+  /* // Small devices (landscape phones, less than 768px) */
+  @media (max-width: 767.98px) {
+    .Footer_Container {
+      height: 162px;
+      width: 100vmax;
+      display: flex;
+      background-color: #1e1e1e;
+      color: #6b7280;
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      align-items: center;
+    }
+  }
+    
+  
+  
+  @media (min-width: 992px) {
+    .Footer_Container {
+      height: 162px;
+      width: 100vmax;
+      display: flex;
+      background-color: #1e1e1e;
+      color: #6b7280;
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      align-items: center;
+    }
+    
+  }
