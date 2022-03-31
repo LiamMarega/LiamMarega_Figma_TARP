@@ -15,9 +15,21 @@ import {
 import { Container, Image, Row, Col, Dropdown, Button } from "react-bootstrap";
 
 function HomePage() {
+
+  const [mostrar, setMostrar] = useState(false);
+
+  const onClickShow = () => {
+    setMostrar(true);
+
+  }
+
+/*   const onClickOcult = () => {
+    setMostrar(false);
+  }; */
+
   return (
     <>
-      <Container fluid className="HomePage_Container">
+      <Container  fluid className="HomePage_Container">
         <Row className="HomePage_Row__Image">
           <Col xl={12}>
             <Image src={ImageLogo} fluid />
@@ -42,31 +54,72 @@ function HomePage() {
         <Row className="HomePage_Row__Dropdown">
           <Col>
             <Dropdown className="d-inline mx-2">
-              <Dropdown.Toggle className="Dropdown_Search" id="dropdown-basic">
+              <input
+                onClick={onClickShow}
+                
+                name="Search"
+                className="inputSearch"
+                placeholder="Search project by name or contract address"
+              />
+              <Dropdown.Toggle
+                aria-expanded="true"
+                className="Dropdown_Search"
+                id="dropdown-basic"
+              >
                 Search project by name or contract address
               </Dropdown.Toggle>
 
-              <Dropdown.Menu className="HomePage_Dropdown">
-                <Dropdown.Item href="#">
-                  <p>
-                    #55 <Image fluid src={pancakeLogo} /> <b>Pancake Swap</b>
-                    (CAKE)
-                  </p>
-                </Dropdown.Item>
-                <Dropdown.Item href="#">
-                  <p>
-                    #2545 <Image fluid src={dinoLogo} />{" "}
-                    <b>Dinoland Metaverse</b>
-                    (DNL)
-                  </p>
-                </Dropdown.Item>
-                <Dropdown.Item href="#">
-                  <p>
-                    #3993 <Image fluid src={squidLogo} /> <b>Squid Game</b>
-                    (SQUID)
-                  </p>
-                </Dropdown.Item>
-              </Dropdown.Menu>
+              {mostrar ? (
+                <Dropdown.Menu show className="HomePage_Dropdown">
+                  <Dropdown.Item href="#">
+                    <div className="ContainerItems">
+                    <p> #55</p>
+                      <Image fluid src={pancakeLogo} /> <p> <b>Pancake Swap</b>
+                      (CAKE)
+                    </p>
+                    </div>
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#">
+                  <div className="ContainerItems">
+                    <p>
+                      #2545</p> <Image fluid src={dinoLogo} />{" "}
+                      <p> <b>Dinoland Metaverse</b>
+                      (DNL)
+                    </p>
+                    </div>
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#">
+                  <div className="ContainerItems">
+                    <p>
+                      #3993</p> <Image fluid src={squidLogo} /> <p> <b>Squid Game</b>
+                      (SQUID)
+                    </p>
+                    </div>
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              ) : (
+                <Dropdown.Menu className="HomePage_Dropdown">
+                  <Dropdown.Item href="#">
+                    <p>
+                      #55 <Image fluid src={pancakeLogo} /> <b>Pancake Swap</b>
+                      (CAKE)
+                    </p>
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#">
+                    <p>
+                      #2545 <Image fluid src={dinoLogo} />{" "}
+                      <b>Dinoland Metaverse</b>
+                      (DNL)
+                    </p>
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#">
+                    <p>
+                      #3993 <Image fluid src={squidLogo} /> <b>Squid Game</b>
+                      (SQUID)
+                    </p>
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              )}
             </Dropdown>
 
             <Dropdown className="d-inline mx-2">
