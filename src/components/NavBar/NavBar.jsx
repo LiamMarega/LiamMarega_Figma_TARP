@@ -13,6 +13,9 @@ import {
 import Logo from "../../images/Logo.png";
 import "./NavBar.css";
 
+/* importacion de iconos */
+import { BiSearchAlt2 } from "react-icons/bi";
+
 function NavBar() {
   const [navBarBackground, setNavBarBackgorund] = useState(false);
 
@@ -45,13 +48,11 @@ function NavBar() {
         keyboard={false}
         size="xl"
         centered
-        
       >
-        <Button  id="ButtonClose"variant="secondary" onClick={handleClose}>
-            X
-          </Button>
-        <Modal.Header  >
-          
+        <Button id="ButtonClose" variant="secondary" onClick={handleClose}>
+          X
+        </Button>
+        <Modal.Header>
           <h2>Create an account.</h2>
           <p>
             Creating an account grants you the benefit of tracking your crypto
@@ -63,35 +64,28 @@ function NavBar() {
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Full name</Form.Label>
               <Form.Control type="email" placeholder="Liam Marega" />
-             
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
               <Form.Control type="email" placeholder="liammarega85@gmail.com" />
-              
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
               <Form.Control type="password" placeholder="**********" />
               <Form.Text className="text-muted">
-              At least 10 characters with a capital letter and a number.
+                At least 10 characters with a capital letter and a number.
               </Form.Text>
             </Form.Group>
           </Form>
         </Modal.Header>
-        <Modal.Body >
-       
-          
+        <Modal.Body>
           <Button onClick={handleClose} id="ButtonRegister" type="submit">
             Submit
           </Button>
         </Modal.Body>
-        
-        <Modal.Footer>
-        
-      </Modal.Footer>
-        
+
+        <Modal.Footer></Modal.Footer>
       </Modal>
 
       {/* ----NAVBAR---- */}
@@ -101,13 +95,35 @@ function NavBar() {
           className={navBarBackground ? "Navbar active" : "Navbar false"}
           fluid
         >
+          {/* Logo */}
           <div className="NavBar_Logo">
             <Navbar.Brand href="#home">
-              <Image fluid src={Logo} />
+              <Image fluid src={Logo} /> <h2>TARP Reader</h2>
             </Navbar.Brand>
           </div>
+
+          {/* Links */}
           <div className="NavBar_Links">
+            {/* Searchbar */}
+
             <Nav className="me-auto">
+              <div className="form">
+                <form action="post">
+                  <i className="fa fa-search">
+                    <BiSearchAlt2 />{" "}
+                  </i>
+                 
+
+
+                  <input
+                    type="text"
+                    className="form-control form-input"
+                    placeholder="Search project"
+                  />
+                 
+
+                </form>
+              </div>
               <Nav.Link href="#home">Company</Nav.Link>
               <Nav.Link href="#features">Customers</Nav.Link>
               <Nav.Link href="#pricing">Security Audit</Nav.Link>
