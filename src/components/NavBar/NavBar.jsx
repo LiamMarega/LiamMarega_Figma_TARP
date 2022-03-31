@@ -14,7 +14,12 @@ import Logo from "../../images/Logo.png";
 import "./NavBar.css";
 
 /* importacion de iconos */
+import {
+  HiOutlineArrowNarrowRight,
+} from "react-icons/hi";
 import { BiSearchAlt2 } from "react-icons/bi";
+import { SiFacebook } from "react-icons/si";
+import { AiFillGoogleCircle } from "react-icons/ai";
 
 function NavBar() {
   const [navBarBackground, setNavBarBackgorund] = useState(false);
@@ -49,9 +54,26 @@ function NavBar() {
         size="xl"
         centered
       >
-        <Button id="ButtonClose" variant="secondary" onClick={handleClose}>
-          X
-        </Button>
+        <div className="CentradoBotonCerrar">
+          <Button id="ButtonClose" variant="secondary" onClick={handleClose}>
+            <svg
+              width="26"
+              height="26"
+              viewBox="0 0 26 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 25L25 1M1 1L25 25"
+                stroke="#D1D5DB"
+                stroke-opacity="0.3"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </Button>
+        </div>
         <Modal.Header>
           <h2>Create an account.</h2>
           <p>
@@ -81,11 +103,28 @@ function NavBar() {
         </Modal.Header>
         <Modal.Body>
           <Button onClick={handleClose} id="ButtonRegister" type="submit">
-            Submit
+            Sign up  <HiOutlineArrowNarrowRight/>
           </Button>
         </Modal.Body>
 
-        <Modal.Footer></Modal.Footer>
+        <Modal.Footer>
+          <div className="NavBar_Container_Modal_Footer">
+            <h5>or sign up with</h5>
+            <div className="NavBar_Modal_Buttons">
+              <Button onClick={handleClose} id="ButtonRegister" type="submit">
+                <SiFacebook />
+                Facebook
+              </Button>
+              <Button onClick={handleClose} id="ButtonRegister" type="submit">
+               <AiFillGoogleCircle />
+                Google
+              </Button>
+            </div>
+            <p>
+              Already have an account? <b>Log in to TARP READER</b>{" "}
+            </p>
+          </div>
+        </Modal.Footer>
       </Modal>
 
       {/* ----NAVBAR---- */}
@@ -112,16 +151,12 @@ function NavBar() {
                   <i className="fa fa-search">
                     <BiSearchAlt2 />{" "}
                   </i>
-                 
-
 
                   <input
                     type="text"
                     className="form-control form-input"
                     placeholder="Search project"
                   />
-                 
-
                 </form>
               </div>
               <Nav.Link href="#home">Company</Nav.Link>

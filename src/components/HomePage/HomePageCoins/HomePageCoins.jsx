@@ -348,13 +348,34 @@ function HomePageCoins() {
                   10
                 </Dropdown.Toggle>
 
-                <Dropdown.Menu>
-                  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Menu className="HomePageCoins_Dropdown_Items">
+                  <Dropdown.Item href="#/action-1">1</Dropdown.Item>
                   <Dropdown.Item href="#/action-2">
-                    Another action
+                   2
                   </Dropdown.Item>
                   <Dropdown.Item href="#/action-3">
-                    Something else
+                    3
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#/action-3">
+                    4
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#/action-3">
+                    5
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#/action-3">
+                    6
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#/action-3">
+                    7
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#/action-3">
+                    8
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#/action-3">
+                    9
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#/action-3">
+                    10
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>

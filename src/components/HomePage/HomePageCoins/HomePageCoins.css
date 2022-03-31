@@ -6,9 +6,12 @@
 }
 
 .HomePageCoins_Container button {
+  color: white;
   margin: 17px;
   height: 50px;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(46, 44, 44, 0.945);
+  border: rgba(255, 255, 255, 0.1) 1px solid !important;
+
   border-radius: 6px;
   font-family: "Inter", sans-serif;
   font-weight: 500;
@@ -22,6 +25,7 @@
   font-family: "Inter", sans-serif;
   font-weight: 500;
   border: 0px;
+  color: rgba(34, 33, 33, 1);
 }
 
 .HomePageCoins_Container_Table {
@@ -89,8 +93,8 @@ td img {
 /* ----PAGINADO---- */
 /* ----PAGINADO---- */
 
-.HomePageCoins_Row__Pagination{
-    padding-top: 50px;
+.HomePageCoins_Row__Pagination {
+  padding-top: 50px;
 }
 
 .HomePageCoins_Row__Pagination li {
@@ -118,7 +122,7 @@ td img {
   color: white;
 }
 .HomePageCoins_Row__Pagination a:focus {
-  background-color: #e9cb88 ;
+  background-color: #e9cb88;
   border-radius: 6px;
 }
 
@@ -132,6 +136,10 @@ td img {
 /* ---DROPDOWN--- */
 /* ---DROPDOWN--- */
 /* ---DROPDOWN--- */
+
+
+
+/* items */
 
 .Footer_Centrado_Dropdown {
   color: white;
@@ -147,8 +155,44 @@ td img {
   line-height: 20px;
   width: 50px;
   height: 100%;
+  color: white;
+  background: #2C2C2C;
+border-radius: 6px;
+box-shadow: none;
 }
 
+
+.Footer_Centrado_Dropdown button:focus{
+  color: white;
+  background: #2C2C2C;
+border-radius: 6px;
+box-shadow: none !important; 
+height: 100%;
+}
+.Footer_Centrado_Dropdown button:active{
+  color: white;
+  background: #2C2C2C;
+border-radius: 6px;
+}
+
+.show>.btn-success.dropdown-toggle{
+  color: white;
+  background: #2C2C2C;
+border-radius: 6px;
+box-shadow: none !important; 
+}
+
+.show>.btn-success.dropdown-toggle:focus{
+  color: white;
+  background: #2C2C2C;
+border-radius: 6px;
+box-shadow: none !important; 
+}
+
+.Footer_Centrado_Dropdown a{
+  color: black;
+ 
+}
 
 /* ----MEDIA QUERY---- */
 /* ----MEDIA QUERY---- */
@@ -156,17 +200,16 @@ td img {
 
 /* // X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
- 
-.HomePageCoins_Container {
-  height: 100%;
-  width: 100vmax;
-  padding-top: 30px;
-}
+  .HomePageCoins_Container {
+    height: 100%;
+    width: 100vmax;
+    padding-top: 30px;
+  }
 
-.HomePageCoins_Row__Pagination{
-  padding-top: 0%;
-  height: 100%;
-}
+  .HomePageCoins_Row__Pagination {
+    padding-top: 0%;
+    height: 100%;
+  }
 }
 
 /* // Small devices (landscape phones, less than 768px) */
@@ -176,13 +219,9 @@ td img {
     width: 100vmax;
     padding-top: 30px;
   }
-  
-  .HomePageCoins_Row__Pagination{
+
+  .HomePageCoins_Row__Pagination {
     padding-top: 0%;
     height: 100%;
   }
-  
 }
-  
-
-

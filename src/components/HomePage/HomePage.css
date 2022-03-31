@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Scheherazade+New&display=swap");
 
 .HomePage_Container {
-  
   height: 100%;
   width: 100vmax;
-  background: rgb(82,44,38);
-background: linear-gradient(284deg, rgba(82,44,38,1) 0%, rgba(33,33,33,1) 63%);
+  background: rgb(82, 44, 38);
+  background: linear-gradient(
+    284deg,
+    rgba(82, 44, 38, 1) 0%,
+    rgba(33, 33, 33, 1) 63%
+  );
 }
 
 .HomePage_Row__Image {
@@ -54,10 +57,47 @@ background: linear-gradient(284deg, rgba(82,44,38,1) 0%, rgba(33,33,33,1) 63%);
 /*-----------DROPDOWNS- -----------*/
 /*-----------DROPDOWNS- -----------*/
 
-.dropdown button {
-   
-  background-color: white;
+.inputSearch {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 250%;
+  background-color: transparent;
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
   color: #6b7280;
+  padding: 10px;
+  transition: 0.2s;
+}
+
+/* Input Busqueda */
+
+.inputSearch:focus {
+  transition: 0.2s;
+  outline: none;
+  border: none;
+}
+.inputSearch:focus::placeholder {
+  color: white;
+  transition: 0.2s;
+}
+.inputSearch:active::placeholder {
+  transition: 0.2s;
+  color: white;
+}
+.Dropdown_Search {
+  position: relative;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  width: 100%;
+}
+
+.dropdown button {
+  background-color: white;
+  color: transparent;
   border: 1px solid #9ca3af;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
@@ -70,22 +110,41 @@ background: linear-gradient(284deg, rgba(82,44,38,1) 0%, rgba(33,33,33,1) 63%);
   height: 50px;
 }
 
-.Dropdown_Search{
-    width: 375px;
+.Dropdown_Search {
+  width: 375px;
 }
 
 .dropdown button:hover {
   background-color: white;
   color: #6b7280;
+  transition: 0.2s;
 }
 .dropdown button:active {
   background-color: white;
   color: #6b7280;
+  transition: 0.2s;
+}
+.show > .btn-primary.dropdown-toggle {
+  background-color: white;
+  color: #6b7280;
+  box-shadow: 0 0 0 0.25rem #e2ca97 !important;
+  transition: 0.2s; 
 }
 
 .HomePage_Dropdown_Network {
+  color: #6b7280 !important;
   width: 120px;
+  transition: 0.2s;
 }
+
+.btn-primary:focus {
+  background-color: white;
+  color: #6b7280;
+  box-shadow: none !important;
+  transition: 0.2s;
+}
+
+
 
 .HomePage_Button_Read {
   box-sizing: border-box;
@@ -94,8 +153,10 @@ background: linear-gradient(284deg, rgba(82,44,38,1) 0%, rgba(33,33,33,1) 63%);
   height: 50px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  background-color: #e9cb88;
+  background-color: rgba(156, 163, 175, 1);
   color: black;
+  transition: 0.2s;
+  border: none;
 }
 
 .HomePage_Button_Read:hover {
@@ -107,18 +168,43 @@ background: linear-gradient(284deg, rgba(82,44,38,1) 0%, rgba(33,33,33,1) 63%);
   background-color: #e2ca97;
   color: black;
 }
+.HomePage_Button_Read button:foucs {
+  box-sizing: border-box;
+  border-radius: 6px;
+  height: 50px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  background-color: #e2ca97;
+  color: black;
+  box-shadow: none;
+}
+.HomePage_Button_Read button:active {
+  box-sizing: border-box;
+  border-radius: 6px;
+  height: 50px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  background-color: #e2ca97;
+  color: black;
+  box-shadow: none;
+}
+
+.HomePage_Row__Dropdown img {
+  box-sizing: border-box;
+  width: 30px;
+
+  margin-right: 30px;
+  margin-left: 10px;
+}
 
 .HomePage_Row__Dropdown p {
   font-family: "Inter", sans-serif;
   font-weight: 600;
   color: #d1d5db;
   font-size: 14px;
-}
-
-.HomePage_Row__Dropdown img {
-  width: 30px;
-  margin-left: 20px;
-  margin-right: 10px;
+  width: 50px;
+  padding-right: 50px;
+  box-sizing: border-box;
 }
 
 .HomePage_Row__Dropdown p b {
@@ -127,7 +213,16 @@ background: linear-gradient(284deg, rgba(82,44,38,1) 0%, rgba(33,33,33,1) 63%);
   color: black;
   font-size: 14px;
   margin-right: 5px;
+  width: 100%;
 }
+
+.ContainerItems {
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
 
 /* -----STATISTICS---- */
 /* -----STATISTICS---- */
@@ -163,12 +258,11 @@ background: linear-gradient(284deg, rgba(82,44,38,1) 0%, rgba(33,33,33,1) 63%);
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 18px;
-  font-feature-settings: 'salt' on;
- 
+  font-feature-settings: "salt" on;
 }
 
 .Statistics_Info h2 {
-    display: flex;
+  display: flex;
   margin: 15px;
   font-family: "Inter", sans-serif;
   font-weight: 700;
@@ -177,24 +271,22 @@ background: linear-gradient(284deg, rgba(82,44,38,1) 0%, rgba(33,33,33,1) 63%);
 }
 
 .Statistics_Info h3 {
-    opacity: 0.5;
-
+  opacity: 0.5;
 }
 
-.Statistics_Text{
+.Statistics_Text {
   font-family: "Inter", sans-serif;
   font-weight: 600;
-    display: flex;
-    margin: 15px;
-    opacity: 0.5;
+  display: flex;
+  margin: 15px;
+  opacity: 0.5;
 }
 
-#TextInfo{
-    padding-top: 20px;
-    color: white;
-    opacity: 0.5;
+#TextInfo {
+  padding-top: 20px;
+  color: white;
+  opacity: 0.5;
 }
-
 
 /* ----MEDIA QUERY---- */
 /* ----MEDIA QUERY---- */
@@ -206,14 +298,17 @@ background: linear-gradient(284deg, rgba(82,44,38,1) 0%, rgba(33,33,33,1) 63%);
     padding-top: 30%;
     height: 100%;
     width: 100vmax;
-    background: rgb(82,44,38);
-  background: linear-gradient(284deg, rgba(82,44,38,1) 0%, rgba(33,33,33,1) 63%);
+    background: rgb(82, 44, 38);
+    background: linear-gradient(
+      284deg,
+      rgba(82, 44, 38, 1) 0%,
+      rgba(33, 33, 33, 1) 63%
+    );
   }
-  
+
   .HomePage_Row__Image {
     padding-top: 117px;
   }
-  
 }
 
 /* // Small devices (landscape phones, less than 768px) */
